@@ -1,40 +1,34 @@
 // Image collections for each category
 const images = {
     top: [
-        'images/top/1.jpg',
-        'images/top/2.jpg',
-        'images/top/3.jpg'
+        'images/top/1.jpeg',
+        'images/top/2.jpeg',
+        'images/top/3.jpeg',
+        'images/top/4.jpeg',
+        'images/top/5.jpeg',
+        'images/top/6.jpeg',
+        'images/top/7.jpeg'
     ],
-    shirt: [
-        'images/shirt/1.jpg',
-        'images/shirt/2.jpg',
-        'images/shirt/3.jpg'
-    ],
-    pants: [
-        'images/pants/1.jpg',
-        'images/pants/2.jpg',
-        'images/pants/3.jpg'
-    ],
-    shoes: [
-        'images/shoes/1.jpg',
-        'images/shoes/2.jpg',
-        'images/shoes/3.jpg'
+    bottom: [
+        'images/bottom/1.jpeg',
+        'images/bottom/2.jpeg',
+        'images/bottom/3.jpeg',
+        'images/bottom/4.jpeg',
+        'images/bottom/5.jpeg'
     ]
 };
 
 // Current indices (1-based for display)
 let currentIndices = {
     top: 1,
-    shirt: 1,
-    pants: 1,
-    shoes: 1
+    bottom: 1
 };
 
 // Initialize from URL parameters
 function initFromURL() {
     const params = new URLSearchParams(window.location.search);
     
-    ['top', 'shirt', 'pants', 'shoes'].forEach(category => {
+    ['top', 'bottom'].forEach(category => {
         const value = params.get(category);
         if (value) {
             const index = parseInt(value);
@@ -51,9 +45,7 @@ function initFromURL() {
 function updateURL() {
     const params = new URLSearchParams();
     params.set('top', currentIndices.top);
-    params.set('shirt', currentIndices.shirt);
-    params.set('pants', currentIndices.pants);
-    params.set('shoes', currentIndices.shoes);
+    params.set('bottom', currentIndices.shirt);
     
     const newURL = window.location.pathname + '?' + params.toString();
     window.history.pushState({}, '', newURL);
@@ -83,7 +75,7 @@ function updateDisplay(category) {
 
 // Update all displays
 function updateAllDisplays() {
-    ['top', 'shirt', 'pants', 'shoes'].forEach(category => {
+    ['top', 'bottom'].forEach(category => {
         updateDisplay(category);
     });
 }

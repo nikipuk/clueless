@@ -4,48 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Outfit Styler</title>
+    <title>Elenes Wardrobe</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="top-bar">
-        <h2>NIKLAS' WARDROBE</h2>
+        <h2>ELENES WARDROBE</h2>
     </div>
 
     <div class="container">        
         <div class="carousel-container">
 
-            <div class="carousel-row">
-                <div class="carousel">
-                    <img id="top-image" src="images/top/1.jpg", alt="Top">
-                    <div class="controls">
-                        <button class="btn" onclick="changeImage('top', -1)">🢀</button>
-                        <button class="btn" onclick="changeImage('top', 1)">🢂</button>
-                    </div>
-                </div>
-
-                <div class="carousel">
-                    <img id="shirt-image" src="images/shirt/1.jpg" alt="Shirt">
-                    <div class="controls">
-                        <button class="btn" onclick="changeImage('shirt', -1)">🢀</button>
-                        <button class="btn" onclick="changeImage('shirt', 1)">🢂</button>
-                    </div>
+            <div class="carousel">
+                <img id="top-image" src="images/top/1.jpeg", alt="Top">
+                <div class="controls">
+                    <button class="btn" onclick="changeImage('top', -1)"><</button>
+                    <button class="btn" onclick="changeImage('top', 1)">></button>
                 </div>
             </div>
             
             <div class="carousel">
-                <img id="pants-image" src="images/pants/1.jpg" alt="Pants">
+                <img id="bottom-image" src="images/bottom/1.jpeg" alt="Bottom">
                 <div class="controls">
-                    <button class="btn" onclick="changeImage('pants', -1)">🢀</button>
-                    <button class="btn" onclick="changeImage('pants', 1)">🢂</button>
-                </div>
-            </div>
-
-            <div class="carousel">
-                <img id="shoes-image" src="images/shoes/1.jpg" alt="Shoes">
-                <div class="controls">
-                    <button class="btn" onclick="changeImage('shoes', -1)">🢀</button>
-                    <button class="btn" onclick="changeImage('shoes', 1)">🢂</button>
+                    <button class="btn" onclick="changeImage('bottom', -1)"><</button>
+                    <button class="btn" onclick="changeImage('bottom', 1)">></button>
                 </div>
             </div>
         </div>

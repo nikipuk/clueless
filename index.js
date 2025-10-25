@@ -45,7 +45,7 @@ function initFromURL() {
 function updateURL() {
     const params = new URLSearchParams();
     params.set('top', currentIndices.top);
-    params.set('bottom', currentIndices.shirt);
+    params.set('bottom', currentIndices.bottom);
     
     const newURL = window.location.pathname + '?' + params.toString();
     window.history.pushState({}, '', newURL);
